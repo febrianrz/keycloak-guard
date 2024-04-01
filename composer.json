@@ -1,0 +1,29 @@
+{
+    "name": "alterindonesia/keycloak-guard",
+    "description": "Keycloak Guard for Laravel",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Alterindonesia\\KeycloakGuard\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Developer",
+            "email": "developer@developer.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "firebase/php-jwt": "^6.3",
+        "php": "^8.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AlterindonesiaRabbitMQProvider"
+            ],
+            "aliases": {}
+        }
+    }
+}
