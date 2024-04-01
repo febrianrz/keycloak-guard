@@ -21,7 +21,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "AlterindonesiaKeycloakGuardProvider"
+                "Alterindonesia\\KeycloakGuard\\AlterindonesiaKeycloakGuardProvider"
             ],
             "aliases": {}
         }
