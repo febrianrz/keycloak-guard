@@ -7,6 +7,7 @@ use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Contracts\Auth\Guard;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\Auth\UserProvider;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Http;
 
 class KeycloakGuard implements Guard
@@ -297,5 +298,10 @@ class KeycloakGuard implements Guard
         } catch (TokenException $e) {
             return abort(401, 'Unauthenticated');
         }
+    }
+
+    public static function flushUser(): void
+    {
+        Auth::logout();
     }
 }
